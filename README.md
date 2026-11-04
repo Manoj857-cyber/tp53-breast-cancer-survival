@@ -26,7 +26,4 @@ TCGA Breast Invasive Carcinoma (PanCancer Atlas), downloaded from cBioPortal (cb
 - "Altered" here means mutation only, so results differ from cBioPortal's mutation + copy-number definition (my earlier cBioPortal analysis gave p = 0.358)
 
 ## Next steps
-- Add copy-number data
-- Repeat with disease-free / progression-free survival
-- Split TP53 mutations by type (missense vs. truncating)
-- Reproduce the analysis in R
+"Altered" here means mutation only (copy-number changes are not included). A previous analysis using cBioPortal's built-in tools, which defines altered as mutation or copy-number change, gave log-rank p = 0.358 (n = 996). The difference is likely due to the different definition and patient cohort; this will be tested by adding copy-number data.
