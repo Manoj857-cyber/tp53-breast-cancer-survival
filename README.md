@@ -21,9 +21,9 @@ TCGA Breast Invasive Carcinoma (PanCancer Atlas), downloaded from cBioPortal (cb
 - Adjusted Cox model (n = 981): TP53 HR = 1.15 (95% CI 0.71-1.87, p = 0.58). Age was the clearest predictor (HR 1.04 per year)
 
 ## Limitations
-- Low event count (132-151 deaths) limits power; the confidence interval is wide
-- 103 patients lacked subtype or age data and were excluded from the Cox model
-- "Altered" here means mutation only, so results differ from cBioPortal's mutation + copy-number definition (my earlier cBioPortal analysis gave p = 0.358)
-
-## Next steps
 "Altered" here means mutation only (copy-number changes are not included). A previous analysis using cBioPortal's built-in tools, which defines altered as mutation or copy-number change, gave log-rank p = 0.358 (n = 996). The difference is likely due to the different definition and patient cohort; this will be tested by adding copy-number data.
+## Next steps
+- Add copy-number data so "altered" matches cBioPortal's definition
+- Repeat with disease-free / progression-free survival
+- Split TP53 mutations by type (missense vs. truncating)
+- Reproduce the analysis in R
